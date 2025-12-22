@@ -119,13 +119,28 @@ Public COVID-19 vaccination data is large, multi-dimensional, and often distribu
 
 ### 4. Analytical SQL Queries
 
-Implemented queries to answer questions such as:
+This project includes a set of analytical SQL queries designed to answer policy-relevant questions about COVID-19 vaccination rollout using a normalized relational database. Analysis focuses on Canada, Denmark, United States, and Wales, as required by the assignment.
 
-* Countries with highest vaccination coverage
-* Daily vs cumulative vaccination trends
-* Comparative vaccination progress across regions
-* Temporal growth patterns
+* Month-over-Month Vaccination Growth
 
+   <img width="368" height="108" alt="image" src="https://github.com/user-attachments/assets/64c98dfb-8af6-489b-a804-ef39066c880f" />
+
+* Countries Exceeding Average Monthly Vaccination Levels
+
+  <img width="728" height="237" alt="image" src="https://github.com/user-attachments/assets/aa2d222c-f17a-440e-9998-0888e12f7707" />
+
+* Vaccine Manufacturer Distribution by Country
+
+  <img width="713" height="411" alt="image" src="https://github.com/user-attachments/assets/1eee70c1-d393-4489-a000-76fd2a7481c4" />
+
+* Data Source Contribution Analysis
+
+  <img width="660" height="365" alt="image" src="https://github.com/user-attachments/assets/a4910da2-78b2-48c3-b930-04545769670a" />
+
+* Fully Vaccinated Population Trends (2022–2023)
+
+  <img width="764" height="225" alt="image" src="https://github.com/user-attachments/assets/121fd634-6f2f-4ad9-bd63-21be92d63330" />
+ 
 ### 5. Validation
 
 * Verified referential integrity
