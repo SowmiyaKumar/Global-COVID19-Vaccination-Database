@@ -151,7 +151,6 @@ Implemented queries to answer questions such as:
 Global-COVID19-Vaccination-Database/
 │
 ├── README.md
-├── LICENSE
 │
 ├── sql/
 │   ├── Database.sql          # Schema creation (DDL)
@@ -160,12 +159,11 @@ Global-COVID19-Vaccination-Database/
 ├── docs/
 │   ├── Model.pdf             # ER & relational design
 │   ├── Queries.pdf           # Query explanations & outputs
-│   └── Assignment_Spec.pdf   # Assessment brief
+│   
 │
 ├── data/
 │   └── README.md             # Data source & access instructions
-│
-└── .gitignore
+└── 
 ```
 
 ---
