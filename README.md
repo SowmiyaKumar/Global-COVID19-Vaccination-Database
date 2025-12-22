@@ -1,159 +1,226 @@
 # Global COVID-19 Vaccination Database & Analytics
-Designed and normalised a scalable 3NF relational database to support country-, state-, age-group-, and manufacturer-level COVID-19 vaccination analytics using real-world public health data.
-
-
----
 
 ## 📌 Project Overview
 
-This project designs and implements a **relational database system** to store, manage, and analyse **global COVID-19 vaccination data**.
-The goal was to transform raw vaccination datasets into a **normalized, query-optimized relational schema** and derive **meaningful analytical insights** using SQL.
+This project presents a **relational database design and analytical SQL implementation** built on a publicly available global COVID-19 vaccination dataset. The objective was to transform raw, large-scale public health data into a **well-normalised, query-efficient relational database** capable of supporting meaningful analytical questions around vaccination rollout, coverage, and trends across countries and time.
 
-The project demonstrates **end-to-end database design**, from conceptual modeling to physical implementation and analytical querying.
+The project was completed as part of **ISYS1055 – Database Concepts (Semester 1, 2024)** at RMIT University and demonstrates applied skills in **data modelling, SQL querying, relational integrity, and analytical reasoning**.
 
 ---
 
 ## 🎯 Problem Statement
 
-Global COVID-19 vaccination data is large, heterogeneous, and often difficult to analyse directly.
-This project addresses the challenge by:
+Public COVID-19 vaccination data is large, multi-dimensional, and often distributed as flat files, which limits analytical flexibility and performance.
 
-* Designing a **well-structured relational schema**
-* Enforcing **data integrity and normalization**
-* Supporting **analytical SQL queries** for policy and health insights
-* Enabling reproducible querying via a portable database file
+**This project addresses the problem by:**
+
+* Designing a **normalised relational schema** for vaccination data
+* Enforcing **primary key / foreign key constraints**
+* Supporting **complex analytical SQL queries**
+* Ensuring **data integrity, scalability, and reproducibility**
 
 ---
 
-## 👩‍💻 My Role
+## 👤 My Role
 
 **Role:** Solo project
 **Responsibilities:**
 
-* Conceptual & logical database design
-* Schema normalization (3NF)
-* SQL DDL & DML implementation
+* Relational database modelling (ER & logical design)
+* Schema normalisation (up to 3NF)
+* SQL DDL and DML implementation
 * Analytical SQL query development
-* Validation of results against real-world vaccination trends
+* Documentation and reporting
 
 ---
 
-## 🗂 Dataset
+## 📊 Dataset
 
-**Source:** Public global COVID-19 vaccination datasets (as provided in course materials)
-**Type:** Structured tabular data
-**Storage:** SQLite relational database
+* **Source:**
+  Our World in Data – *Global COVID-19 Vaccination Dataset*
 
-### Key Entities
+* **Original Publication:**
+  *A Global Database of COVID-19 Vaccinations* (Nature Human Behaviour)
 
-* Countries / Regions
-* Vaccination types
-* Vaccination metrics (daily, cumulative)
-* Population context
+* **Data Characteristics:**
+
+  * Global coverage (169+ countries)
+  * Daily vaccination records
+  * Metrics include:
+
+    * Total vaccinations
+    * People vaccinated (first dose)
+    * Fully vaccinated
+    * Daily vaccination rates
+    * Population-adjusted coverage
+
+* **Data Type:** Public, aggregated, time-series
+
+* **Format Used:** CSV → Relational Database (SQLite)
 
 ---
 
-## 🛠️ Tech Stack
+## 🧰 Tech Stack
 
 * **Database:** SQLite
-* **Query Language:** SQL
-* **Design Tools:** ER modeling (conceptual & logical)
-* **Documentation:** PDF reports (model + queries)
+* **Languages:** SQL
+* **Design Tools:** ER modelling (conceptual & logical)
+* **Artifacts:**
+
+  * `.sql` schema scripts
+  * Analytical query scripts
+  * PDF documentation
 
 ---
 
-## 🧠 Database Design Approach
+## 🏗️ Database Design
 
-### 1️⃣ Conceptual Design
+### Key Design Principles
 
-* Identified core entities and relationships
-* Defined primary and foreign keys
-* Modeled real-world vaccination processes
+* Normalised schema to reduce redundancy
+* Clear separation of:
 
-📄 *See:* `Model.pdf`
+  * Country metadata
+  * Daily vaccination records
+  * Vaccine metrics
+* Enforced referential integrity using foreign keys
+* Optimised for analytical querying
 
----
+### Core Tables 
 
-### 2️⃣ Logical & Physical Design
+* `Source`
+* `Date`
+* `Vaccine`
+* `Location`
+* `Age`
 
-* Converted ER model into normalized relational tables
-* Applied **3rd Normal Form (3NF)** to reduce redundancy
-* Enforced referential integrity using constraints
-
-📄 *See:* `Database.sql`
-
----
-
-### 3️⃣ Database Implementation
-
-* Created tables using SQL DDL
-* Populated data using structured inserts
-* Packaged as a portable SQLite database
-
-📄 *See:* `Vaccinations.db`
+> Full schema and ER diagrams are included in `/docs/Model.pdf`
 
 ---
 
-## 📈 Analytical SQL Queries
+## 🔄 Approach
 
-The project includes **complex analytical queries** answering real-world questions such as:
+### 1. Data Understanding
 
-* Vaccination progress by country and region
-* Fully vaccinated vs partially vaccinated population
-* Temporal vaccination trends
-* Comparative analysis between regions
+* Analysed raw COVID vaccination structure
+* Identified repeating attributes and time-variant fields
 
-📄 *See:*
+### 2. Relational Modelling
 
-* `Queries.sql` (executable SQL)
-* `Queries.pdf` (documented explanations)
+* Designed ER diagram
+* Converted to logical relational schema
+* Applied normalisation rules (1NF → 3NF)
+
+### 3. Database Implementation
+
+* Created schema using SQL DDL
+* Applied primary and foreign key constraints
+* Loaded cleaned vaccination data
+
+### 4. Analytical SQL Queries
+
+Implemented queries to answer questions such as:
+
+* Countries with highest vaccination coverage
+* Daily vs cumulative vaccination trends
+* Comparative vaccination progress across regions
+* Temporal growth patterns
+
+### 5. Validation
+
+* Verified referential integrity
+* Ensured query correctness and performance
+* Cross-checked outputs against source data
 
 ---
 
-## ✅ Validation & Insights
+## 📈 Results & Insights
 
-* Verified results against known global vaccination patterns
-* Ensured aggregation accuracy using GROUP BY and JOIN logic
-* Queries return **consistent, explainable outputs** suitable for reporting
+* Successfully transformed flat public health data into a **query-ready relational database**
+* Enabled **multi-table analytical queries** not feasible in CSV form
+* Demonstrated scalable design suitable for ongoing data updates
+* Improved analytical clarity through structured modelling
 
----
-
-## 📊 Final Output
-
-* Fully functional **SQLite database**
-* Reproducible **SQL analytics**
-* Clear **documentation** for schema and queries
+> This project focuses on **data modelling and analytical correctness** rather than predictive modelling.
 
 ---
 
-## 📁 Repository Structure 
+## 📂 Repository Structure
 
-```text
+```
 Global-COVID19-Vaccination-Database/
 │
 ├── README.md
-├── Database.sql              # Schema creation
-├── Queries.sql               # Analytical queries
-├── Vaccinations.db           # SQLite database
+├── LICENSE
+│
+├── sql/
+│   ├── Database.sql          # Schema creation (DDL)
+│   ├── Queries.sql           # Analytical SQL queries
 │
 ├── docs/
-│   ├── Model.pdf             # ER & relational model
-│   ├── Queries.pdf           # Query explanations
-│   └── Assignment_Spec.pdf   # Original assignment brief
+│   ├── Model.pdf             # ER & relational design
+│   ├── Queries.pdf           # Query explanations & outputs
+│   └── Assignment_Spec.pdf   # Assessment brief
+│
+├── data/
+│   └── README.md             # Data source & access instructions
+│
+└── .gitignore
 ```
 
 ---
 
-## 🔗 How to Run
+## 🔁 Reproducibility
 
-1. Open `Vaccinations.db` using:
+To reproduce this project locally:
 
-   * DB Browser for SQLite, or
-   * SQLite CLI
-2. Execute queries from `Queries.sql`
-3. Compare outputs with explanations in `Queries.pdf`
+1. Download the vaccination dataset from:
+
+   ```
+   https://github.com/owid/covid-19-data/tree/master/public/data/vaccinations
+   ```
+
+2. Create the database:
+
+   ```sql
+   sqlite3 vaccinations.db < sql/Database.sql
+   ```
+
+3. Load the dataset (CSV import via SQLite or DB tool)
+
+4. Run analytical queries:
+
+   ```sql
+   sqlite3 vaccinations.db < sql/Queries.sql
+   ```
+
+> Note: The `.db` file is excluded due to size and academic restrictions.
+
+---
+
+## 📜 Licensing & Academic Use
+
+### Dataset License
+
+* Dataset © **Our World in Data**
+* Licensed under **Creative Commons BY 4.0**
+* Attribution required for reuse
+
+### Project License
+
+This repository is licensed under the **MIT License**.
+
+> Academic submissions are shared **for portfolio and learning purposes only**.
+> This project does **not** include proprietary assessment solutions beyond permitted artefacts.
 
 
+---
+
+## 📌 Notes on Academic Integrity
+
+* This repository contains **original work**
+* Shared in compliance with RMIT’s *Trusted* classification
+* No grading rubrics, marking guides, or confidential feedback included
 
 
 
