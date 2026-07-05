@@ -134,15 +134,6 @@ sqlite3 Vaccinations.db < Queries.sql
 
 ---
 
-## Academic Context
-
-* **Course:** ISYS1055 – Database Concepts
-* **Institution:** RMIT University
-* **Use Case:** Academic assessment (relational modelling, SQL analytics, data integrity)
-
-This repository contains **original schema design, SQL logic, and documentation**, while the dataset itself remains attributed to its original authors.
-
----
 
 ## Attribution
 

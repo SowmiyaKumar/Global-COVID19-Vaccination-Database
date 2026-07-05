@@ -219,21 +219,6 @@ To reproduce this project locally:
 * Licensed under **Creative Commons BY 4.0**
 * Attribution required for reuse
 
-### Project License
-
-This repository is licensed under the **MIT License**.
-
-> Academic submissions are shared **for portfolio and learning purposes only**.
-> This project does **not** include proprietary assessment solutions beyond permitted artefacts.
-
-
----
-
-## 📌 Notes on Academic Integrity
-
-* This repository contains **original work**
-* Shared in compliance with RMIT’s *Trusted* classification
-* No grading rubrics, marking guides, or confidential feedback included
 
 
 
