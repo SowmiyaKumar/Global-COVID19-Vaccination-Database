@@ -4,7 +4,7 @@
 
 This project presents a **relational database design and analytical SQL implementation** built on a publicly available global COVID-19 vaccination dataset. The objective was to transform raw, large-scale public health data into a **well-normalised, query-efficient relational database** capable of supporting meaningful analytical questions around vaccination rollout, coverage, and trends across countries and time.
 
-The project was completed as part of **ISYS1055 – Database Concepts (Semester 1, 2024)** at RMIT University and demonstrates applied skills in **data modelling, SQL querying, relational integrity, and analytical reasoning**.
+The project demonstrates applied skills in **data modelling, SQL querying, relational integrity, and analytical reasoning**.
 
 ---
 
